@@ -13,10 +13,15 @@ import { HEROES, VILLAINS} from '../mock-heroes';
 
 export class HeroesComponent implements OnInit {
  selectedHero: Hero; 
+ selectedVillain: Villain; 
+ 
  onSelect(hero: Hero): void {
   this.selectedHero = hero;
 }
 
+onVillainSelect(villain: Villain): void {
+ this.selectedVillain = villain;
+}
 
   heroes = HEROES;
   villains = VILLAINS; 

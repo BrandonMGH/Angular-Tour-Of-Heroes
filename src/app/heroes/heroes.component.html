@@ -4,9 +4,9 @@
         <span class="badge">{{hero.id}}. </span>{{hero.name}}
     </li>
 </ul>
-<ul>
-    <li *ngFor="let haha of villains" [class.selected="haha === selectedHero"]>
-        <span class="badge">{{haha.id}}. </span>{{haha.name}}
+<ul class="heroes">
+    <li *ngFor="let villain of villains" (click)="onVillainSelect(villain)" [class.selected]="villain === selectedHero">
+        <span class="badge">{{villain.id}}. </span>{{villain.name}}
     </li>
 </ul>
 
@@ -17,6 +17,18 @@
     <div>
       <label>name:
         <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+      </label>
+    </div>
+  
+  </div>
+
+  <div *ngIf="selectedVillain">
+
+    <h2>{{selectedVillain.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedVillain.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedVillain.name" placeholder="name"/>
       </label>
     </div>
   
