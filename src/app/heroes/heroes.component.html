@@ -4,35 +4,10 @@
         <span class="badge">{{hero.id}}. </span>{{hero.name}}
     </li>
 </ul>
-<ul class="heroes">
-    <li *ngFor="let villain of villains" (click)="onVillainSelect(villain)" [class.selected]="villain === selectedHero">
-        <span class="badge">{{villain.id}}. </span>{{villain.name}}
-    </li>
-</ul>
 
-<div *ngIf="selectedHero">
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedHero.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-      </label>
-    </div>
-  
-  </div>
 
-  <div *ngIf="selectedVillain">
-
-    <h2>{{selectedVillain.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedVillain.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedVillain.name" placeholder="name"/>
-      </label>
-    </div>
-  
-  </div>
 
 
 <!-- <h2>{{hero.name | uppercase}} Details</h2>
