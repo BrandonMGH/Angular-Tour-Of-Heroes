@@ -1,4 +1,4 @@
-import { Hero } from './hero';
+import { Hero, Villain } from './hero';
 
 export const HEROES: Hero[] = [
   { id: 11, name: 'Dr Nice', ability: "Invisibility" },
@@ -12,3 +12,9 @@ export const HEROES: Hero[] = [
   { id: 19, name: 'Magma', ability: "Frost" },
   { id: 20, name: 'Tornado', ability: "Fire" }
 ];
+
+export const VILLAINS: Villain[] = [
+    {id: 1, name: 'Dr No', ability: 'Super Genius'},
+    {id: 2, name: 'Bruiser', ability: 'Super Strength'},
+    {id: 3, name: 'Diana the Dagger', ability: 'Weapon Specialist'}
+]

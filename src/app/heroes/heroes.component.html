@@ -4,6 +4,11 @@
         <span class="badge">{{hero.id}}. </span>{{hero.name}}
     </li>
 </ul>
+<ul>
+    <li *ngFor="let haha of villains" [class.selected="haha === selectedHero"]>
+        <span class="badge">{{haha.id}}. </span>{{haha.name}}
+    </li>
+</ul>
 
 <div *ngIf="selectedHero">
 

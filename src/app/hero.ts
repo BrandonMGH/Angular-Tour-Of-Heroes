@@ -3,3 +3,9 @@ export interface Hero {
     name: string;
     ability: string; 
   }
+
+  export interface Villain {
+    id: number; 
+    name: string;
+    ability: string; 
+  }
